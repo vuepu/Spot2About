@@ -41,6 +41,8 @@ Designed for Chromium-based browsers:
 
 Spot2About is free. Donations may be added later for anyone who wants to support development.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X21J3BJA)
+
 ## ⚠️ Important
 
 Spot2About is an independent project and is not affiliated with Spotify or WhatsApp.
