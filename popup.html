@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spot2About</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <img src="icons/icon48.png" class="logo" alt="Spot2About icon">
+      <div class="brand">
+        <h1>Spot<span>2About</span></h1>
+        <p>Spotify → WhatsApp About</p>
+      </div>
+      <span class="version">v2.0</span>
+    </header>
+
+    <section class="main-switch card">
+      <div>
+        <strong>Automatic sync</strong>
+        <p id="syncState">Checking settings…</p>
+      </div>
+      <label class="switch" aria-label="Automatic sync">
+        <input type="checkbox" id="enabled">
+        <span class="track"></span>
+      </label>
+    </section>
+
+    <div class="services">
+      <div class="service"><span class="service-icon spotify">♫</span><span>Spotify</span><small id="spotifyState">Checking…</small></div>
+      <div class="service"><span class="service-icon whatsapp">◎</span><span>WhatsApp</span><small id="whatsappState">Checking…</small></div>
+    </div>
+
+    <section class="card settings">
+      <div class="section-head"><h2>No music message</h2><span class="hint">After 30 seconds</span></div>
+      <p class="help">Choose what your About says when you pause or stop listening.</p>
+      <div class="presets" id="presets">
+        <button class="preset" type="button" data-text="👀">👀</button>
+        <button class="preset" type="button" data-text="💤">💤</button>
+        <button class="preset" type="button" data-text="🎧 Not listening">🎧 Away</button>
+        <button class="preset" type="button" data-text="🎵 Nothing playing">🎵 Nothing</button>
+      </div>
+      <label for="idleMessage" class="input-label">Custom message</label>
+      <input id="idleMessage" type="text" maxlength="50" spellcheck="false" placeholder="👀">
+      <div class="input-bottom"><span>Up to 50 characters</span><span id="counter">0 / 50</span></div>
+    </section>
+
+    <section class="card preview">
+      <div class="section-head"><h2>About preview</h2><span class="live-dot"></span></div>
+      <p class="help">Last status sent</p>
+      <div class="preview-status" id="currentStatus">Nothing sent yet</div>
+      <div class="preview-separator"></div>
+      <p class="help">When no music is playing</p>
+      <div class="preview-idle" id="idlePreview">👀</div>
+    </section>
+
+    <div class="actions">
+      <button id="reset" class="secondary" type="button">Reset idle message</button>
+      <button id="save" class="primary" type="button">Save changes</button>
+    </div>
+    <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+    <footer>Made for music lovers <span>•</span> Spot2About</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

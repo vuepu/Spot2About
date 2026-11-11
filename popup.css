@@ -1,0 +1,22 @@
+:root { color-scheme: dark; --bg:#090f10; --panel:#131d1c; --line:#253431; --muted:#8caaa1; --green:#39e389; }
+* { box-sizing:border-box; }
+body { width:350px; margin:0; background:var(--bg); color:#f2f8f5; font:13px/1.45 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif; }
+.app { padding:19px; }
+.top { display:flex; align-items:center; gap:11px; padding-bottom:17px; }
+.logo { width:43px; height:43px; border-radius:13px; }
+.brand { flex:1; min-width:0; }
+h1 { margin:0; font-size:20px; letter-spacing:-.8px; line-height:1.15; } h1 span { color:var(--green); }
+.brand p { color:var(--muted); font-size:11px; margin:4px 0 0; }
+.version { align-self:flex-start; font-size:10px; color:#719185; background:#172623; padding:4px 6px; border-radius:7px; }
+.card { background:linear-gradient(145deg,#172421,#111b1a); border:1px solid var(--line); border-radius:16px; }
+.main-switch { padding:15px; display:flex; align-items:center; justify-content:space-between; }
+.main-switch strong { font-size:14px; } .main-switch p { margin:4px 0 0; font-size:11px; color:var(--muted); }
+.switch { position:relative; width:43px; height:25px; flex-shrink:0; } .switch input { position:absolute; opacity:0; width:100%; height:100%; margin:0; cursor:pointer; } .track { display:block; width:43px; height:25px; background:#34413f; border-radius:50px; transition:.2s; pointer-events:none; } .track:after { content:""; display:block; position:absolute; width:19px; height:19px; left:3px; top:3px; border-radius:50%; background:white; transition:.2s; } .switch input:checked+.track { background:#25c979; } .switch input:checked+.track:after { transform:translateX(18px); } .switch input:focus-visible+.track { outline:2px solid white; outline-offset:3px; }
+.services { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin:11px 0; }
+.service { background:#101a18; border:1px solid #1d302b; border-radius:12px; padding:11px; display:grid; grid-template-columns:26px 1fr; column-gap:6px; align-items:center; } .service-icon { display:grid; place-items:center; width:24px; height:24px; border-radius:50%; background:#1dce6a; color:#091910; font-size:18px; font-weight:800; grid-row:span 2; } .whatsapp { background:#1b5840; color:#6ef2ad; } .service span:nth-child(2) { font-size:12px; font-weight:650; } .service small { color:#7faaa0; font-size:10px; }
+.settings,.preview { padding:15px; margin-bottom:11px; } .section-head { display:flex; align-items:center; justify-content:space-between; gap:10px; } h2 { font-size:14px; margin:0; font-weight:700; } .hint { font-size:10px; color:var(--green); background:#153429; padding:4px 7px; border-radius:20px; } .help { font-size:11px; color:var(--muted); margin:8px 0 12px; }
+.presets { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; } button { cursor:pointer; font:inherit; } .preset { border:1px solid #31443c; background:#1a2924; color:#c8e3d7; border-radius:9px; padding:7px 10px; font-size:11px; } .preset.active { border-color:var(--green); background:#204e36; color:white; }
+.input-label { display:block; font-size:11px; color:#cde7db; margin-bottom:6px; } input[type=text] { width:100%; height:38px; border:1px solid #355046; border-radius:10px; padding:0 11px; background:#0a1513; color:white; font:inherit; outline:none; } input[type=text]:focus { border-color:var(--green); box-shadow:0 0 0 2px #2ce88822; }
+.input-bottom { display:flex; justify-content:space-between; color:#718e85; font-size:10px; margin-top:6px; }
+.live-dot { width:7px; height:7px; background:var(--green); border-radius:50%; box-shadow:0 0 10px #39e38988; } .preview .help { margin:9px 0 5px; } .preview-status,.preview-idle { padding:11px; border:1px solid #2d4339; background:#0b1613; border-radius:10px; word-break:break-word; min-height:40px; } .preview-status { color:#f5fcf6; } .preview-idle { color:#9ff3bc; } .preview-separator { height:1px; background:#23362f; margin-top:12px; }
+.actions { display:flex; gap:8px; } .actions button { padding:11px; border-radius:10px; font-weight:650; font-size:12px; } .secondary { flex:1.2; border:1px solid #334b42; background:#15211e; color:#d1e4d8; } .primary { flex:1; border:0; background:#34db80; color:#07180e; } .primary:hover { background:#53f098; } .feedback { text-align:center; color:#8bf0b0; font-size:11px; margin:7px 0 0; min-height:15px; } footer { text-align:center; color:#58756a; font-size:10px; padding:7px 0 0; } footer span { color:#2aca78; }
